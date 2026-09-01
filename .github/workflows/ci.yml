@@ -18,4 +18,4 @@ jobs:
           distribution: 'temurin'
 
       - name: Build and test
-        run: mvn -f Student--API/pom.xml clean package
+        run: mvn clean package
