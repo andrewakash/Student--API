@@ -31,4 +31,11 @@ jobs:
         env:
           SPRING_PROFILES_ACTIVE: test
       - name: Build docker image
-        run: docker build -t student-api:latest .
+        run: docker build -t ${{secrets.DOCKER_NAME}}/student-api:latest .
+      - name: login to the DockerHub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_NAME}}
+          password: ${{ secrets.DOCKER_TOKEN}}
+      - name: push Docker image
+        run: docker push ${{ secrets.DOCKER_NAME}}/student-api:latest
