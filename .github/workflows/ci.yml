@@ -7,6 +7,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: studentdb
+        ports:
+          - 3307:3306
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -19,3 +28,5 @@ jobs:
 
       - name: Build and test
         run: mvn clean package
+        env:
+          SPRING_PROFILES_ACTIVATE: test
