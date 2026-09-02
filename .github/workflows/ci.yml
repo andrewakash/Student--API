@@ -1,4 +1,4 @@
-name: Student API CI
+name: Student API CI-TEST
 on:
   push:
     branches:
