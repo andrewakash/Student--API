@@ -29,4 +29,4 @@ jobs:
       - name: Build and test
         run: mvn clean package
         env:
-          SPRING_PROFILES_ACTIVATE: test
+          SPRING_PROFILES_ACTIVE: test
