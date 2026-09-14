@@ -33,6 +33,13 @@ jobs:
         env:
           SPRING_PROFILES_ACTIVE: test
 
+      - name: Free up disk space
+        run: |
+          sudo docker rmi $(docker images -q) || true
+          sudo apt-get remove -y '^.*-dev$' || true
+          sudo apt-get autoremove -y || true
+          sudo apt-get clean || true
+
       - name: Build docker image
         run: docker build -t ${{ secrets.DOCKER_NAME }}/student-api:latest .
 
