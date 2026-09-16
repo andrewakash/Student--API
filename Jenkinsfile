@@ -94,7 +94,7 @@ pipeline {
             post {
 
                 always {
-
+                    echo 'test the webhook bro in the github'
                     echo 'Publishing JUnit test results...'
 
                     junit 'target/surefire-reports/*.xml'
