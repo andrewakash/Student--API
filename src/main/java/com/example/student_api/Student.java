@@ -14,7 +14,7 @@ public class Student {
     private Long id;
     private String name;
     private String department;
-    private String erasethis;
+    private String erasethisdontforgot;
     public Student(){
 
     }
@@ -42,10 +42,10 @@ public class Student {
         this.department=department;
     }
     public void setErasethis(String erasethis){
-        this.erasethis=erasethis;
+        this.erasethisdontforgot=erasethisdontforgot;
     }
     public String GetErasethis(){
-        return erasethis;
+        return erasethisdontforgot;
     }
 
 }
