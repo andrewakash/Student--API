@@ -96,6 +96,7 @@ pipeline {
 
                 always {
                     echo 'test the webhook bro in the github'
+                    echo 'again testing  bro previous testing is failed due to the not connect the gib repo'
                     echo 'Publishing JUnit test results...'
 
                     junit 'target/surefire-reports/*.xml'
