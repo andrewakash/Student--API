@@ -9,12 +9,14 @@ import java.util.List;
 public class StudentService {
     private StudentRepository repo;
     public StudentService(StudentRepository repo){
+
         this.repo=repo;
     }
     public Student savestudent(Student student ) {
         return repo.save(student);
     }
     public List<Student> Getallstudents(){
+
         return repo.findAll();
     }
 }

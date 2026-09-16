@@ -12,14 +12,17 @@ import java.util.List;
 public class StudentController {
     private final StudentService service;
    public  StudentController(StudentService service){
+
        this.service=service;
    }
    @GetMapping
     public List<Student> getallstudents(){
+
        return service.Getallstudents();
    }
     @PostMapping
     public Student savestudent(@RequestBody Student student) {
         return service.savestudent(student);
     }
+
 }
