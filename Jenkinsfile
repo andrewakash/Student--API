@@ -63,6 +63,7 @@ pipeline {
         stage('Build') {
 
             steps {
+                echo 'test the ngrok works or not'
 
                 echo "Building ${env.APP_NAME}"
 
